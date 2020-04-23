@@ -1,0 +1,30 @@
+package array;
+
+public class Practice_Array {
+	 public static int valueToAdd(int ar[], int n){
+	        int sum1 = 0;
+	        for(int i=0; i<n/2; i++)
+	            sum1 += ar[i];
+	        int sum2 = 0;
+	        for(int j=n/2; j<n; j++)
+	           sum2 += ar[j];
+	           
+	    return Math.abs(sum1 - sum2);
+	        
+	        
+	    }
+	    
+		public static void main (String[] args) {
+			int arr[] = {30,10};
+			int n= 2;
+			System.out.println(valueToAdd(arr,n));
+		}
+	
+	
+		
+		
+		
+		
+	
+
+}

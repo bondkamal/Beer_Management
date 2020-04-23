@@ -1,0 +1,64 @@
+package stok;
+
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.Panel;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+public class Report extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Report frame = new Report();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Report() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 1201, 710);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setLayout(new BorderLayout(0, 0));
+		setContentPane(contentPane);
+		
+		Panel panel = new Panel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		panel.setLayout(null);
+		
+		Button Stock_btn = new Button("STOCK");
+		Stock_btn.setFont(new Font("Dialog", Font.BOLD, 20));
+		Stock_btn.setBackground(new Color(255, 255, 255));
+		Stock_btn.setActionCommand("New button");
+		Stock_btn.setBounds(243, 176, 146, 69);
+		panel.add(Stock_btn);
+		
+		Button Seal_btn = new Button("SALE");
+		Seal_btn.setFont(new Font("Dialog", Font.BOLD, 20));
+		Seal_btn.setBackground(new Color(255, 255, 255));
+		Seal_btn.setActionCommand("New Button");
+		Seal_btn.setBounds(243, 291, 146, 69);
+		panel.add(Seal_btn);
+	}
+
+}

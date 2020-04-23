@@ -1,0 +1,17 @@
+package array;
+
+public class SingleDimensionArrayMain {
+
+	public static void main(String[] args) {
+		System.out.println("Creating a blank array of size 10");
+		SingleDimensionArray sda = new SingleDimensionArray(10);
+		
+		
+		System.out.println("Printing the array");
+		sda.traverseArray();
+		System.out.println();
+		
+		
+	}
+
+}
